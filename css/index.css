@@ -1,0 +1,42 @@
+body {
+    background-color: #0E1821;
+    font-family: 'Jost';
+    color: #f9fafb;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+.highlight {
+    color: #FFCD00;
+}
+
+/* Explore Button */
+.explore-button {
+    padding: 4px 35px;
+    background-color: #009CDE;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.explore-button:hover {
+    background-color: #2563eb;
+}

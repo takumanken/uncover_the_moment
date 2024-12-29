@@ -1,0 +1,343 @@
+/* Global Setting */
+
+body, header, footer {
+    background-color: #0E1821;
+    font-family: 'Jost';
+    color: #f9fafb;
+}
+
+/* Header Footer */
+
+header, footer {
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/* Header */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 30px 80px 10px 80px;
+}
+
+header h1 {
+    padding-left: 3px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+header a {
+    color: #F3F1E5;
+    text-decoration: none;
+}
+
+header #filter-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header #count-container {
+    padding: 7px 0 0 0;
+    text-align: left;
+    width: 150px;
+}
+
+header #count-container p{
+    padding: 0;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    padding: 2px 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    opacity: 1;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    color: #b9b9b9;
+    opacity: 1;
+}
+
+#footer-portrait {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    padding: 5px 0 15px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Body */
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 25px;
+    margin: 0;
+}
+
+#portrait-gallery img {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Gallery Page */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.dropdown-btn {
+    padding: 2px 20px;
+    border: 1px solid #838383;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-btn.filtered {
+    background-color: #009CDD;
+    border: 1px solid #009CDD;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #0E1821;
+    border: 1px solid #2f2f2f;
+    opacity: 0.9;
+    position: absolute;
+    padding: 15px;
+    width: fit-content;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.dropdown-content label {
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.dropdown-content input {
+    margin-right: 8px;
+  }
+
+#portrait-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5px;
+    width: 90%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.portrait-item {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.portrait-name {
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.25s;
+}
+
+.portrait-image {
+    height: 400px;
+    object-fit: cover;
+    transition: filter 0.25s, transform 0.25s;
+}
+
+/* Portrait Page */
+
+#portrait-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    height: 90vh;
+}
+
+/* Portrait Image */
+#portrait-section {
+    flex: 1;
+    margin: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portrait-section img {
+    min-width: 600px;
+    max-width: 100%;
+    min-height: 600px;
+    max-height: 85vh;
+    object-fit: contain;
+    margin: auto auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/*----------------------------------------
+Info Section
+----------------------------------------*/
+
+/* Container */
+#info-section {
+    flex: 1;
+    min-width: 600px;
+    gap: 20px;
+    padding: 20px 70px 20px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+
+/* Name */
+#name-div {
+    flex: 1;
+    margin-bottom: 0px;
+}
+
+#name {
+    font-size: 36px;
+    font-weight: 600px;
+    margin-bottom: 10px;
+}
+
+#period {
+    margin: 0;
+}
+
+/* Basic Info (Gender, Age, Year, Artist) */
+#basicInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: 10px 0px 10px 0px;
+}
+
+.basicInfoItem {
+    flex: 1;
+    background-color: #142330;
+    border-radius: 10px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.basicInfoItem .categoryName {
+    font-size: 14px;
+    padding: 0px;
+    color: #798087;
+}
+
+#gender, #age, #portraitYear, #artist {
+    vertical-align: middle;
+}
+
+#gender, #age, #portraitYear {
+    flex: 2;
+}
+
+#artist {
+    flex: 4;
+}
+
+/* AI Summary */
+#aiSummary {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+}
+
+#aiSummaryTitle {
+    flex-basis: 25px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 25px;
+}
+
+#aiIcon {
+    width: 25px;
+}
+
+#aiSummaryTitle text {
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+#ai-summary-contents {
+    background-color: #002554;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#ai-summary-contents h4 {
+    height: 25px;
+    font-size: 17px;
+    margin: 20px 20px 0 20px;
+    padding: 0;
+    font-weight: 500;
+}
+
+#ai-summary-contents p {
+    flex: 50px;
+    font-size: 16px;
+    margin: 5px 20px 10px 20px;
+    padding: 0;
+    font-weight: 250;
+    line-height: 1.2;
+}
+
+#ai-summary-contents svg {
+    flex-grow: 1;
+    margin: 0 40px 0px 0px;
+}
